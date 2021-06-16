@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstSimpleForms", "FirstSimpleForms.csproj", "{F635737E-6756-48E1-965F-378AD4088235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleForm", "..\TriangleForm\TriangleForm.csproj", "{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = Simple Forms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F635737E-6756-48E1-965F-378AD4088235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F635737E-6756-48E1-965F-378AD4088235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F635737E-6756-48E1-965F-378AD4088235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F635737E-6756-48E1-965F-378AD4088235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6338F5B1-F9FD-486F-ADAE-77B093814A63}
+	EndGlobalSection
+EndGlobal
