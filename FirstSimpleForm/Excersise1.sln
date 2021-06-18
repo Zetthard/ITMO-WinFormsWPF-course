@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstSimpleForms", "FirstSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleForm", "..\TriangleForm\TriangleForm.csproj", "{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StretchingForm", "..\StretchingForm\StretchingForm.csproj", "{0744734C-262D-4772-A34F-476C51C0CE18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21A2FAA6-F058-4FA1-A1C3-3D94598510E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0744734C-262D-4772-A34F-476C51C0CE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0744734C-262D-4772-A34F-476C51C0CE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0744734C-262D-4772-A34F-476C51C0CE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0744734C-262D-4772-A34F-476C51C0CE18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

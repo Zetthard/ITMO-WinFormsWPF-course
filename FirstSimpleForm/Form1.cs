@@ -12,9 +12,6 @@ namespace FirstSimpleForm
 {
     public partial class Form1 : Form
     {
-        /// <summary>
-        /// change
-        /// </summary>
         nForm myF2;
 
         public Form1()

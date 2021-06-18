@@ -1,7 +1,7 @@
 ﻿
 namespace TriangleForm
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,37 +29,23 @@ namespace TriangleForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.Closeform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Closeform
             // 
-            this.Closeform.Location = new System.Drawing.Point(27, 21);
-            this.Closeform.Name = "Closeform";
-            this.Closeform.Size = new System.Drawing.Size(257, 96);
-            this.Closeform.TabIndex = 0;
-            this.Closeform.Text = "Close form";
-            this.Closeform.UseVisualStyleBackColor = true;
-            this.Closeform.Click += new System.EventHandler(this.Closeform_Click);
+            this.Closeform.BackColor = System.Drawing.Color.DarkSalmon;
+            this.Closeform.Text = "Hello!";
+            this.Closeform.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Chocolate;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Closeform);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form2";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        protected System.Windows.Forms.Button Closeform;
     }
 }
-

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F635737E-6756-48E1-965F-378AD4088235}</ProjectGuid>
+    <ProjectGuid>{0744734C-262D-4772-A34F-476C51C0CE18}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FirstSimpleForm</RootNamespace>
-    <AssemblyName>FirstSimpleForm</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>StretchingForm</RootNamespace>
+    <AssemblyName>StretchingForm</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -52,19 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="nForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="nForm.Designer.cs">
-      <DependentUpon>nForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="nForm.resx">
-      <DependentUpon>nForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
