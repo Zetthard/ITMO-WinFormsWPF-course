@@ -45,7 +45,7 @@ namespace StretchingForm
             this.panel1.Controls.Add(this.InputData);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(937, 122);
+            this.panel1.Size = new System.Drawing.Size(938, 122);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -56,7 +56,7 @@ namespace StretchingForm
             this.DataInput.Location = new System.Drawing.Point(279, 45);
             this.DataInput.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.DataInput.Name = "DataInput";
-            this.DataInput.Size = new System.Drawing.Size(590, 31);
+            this.DataInput.Size = new System.Drawing.Size(591, 31);
             this.DataInput.TabIndex = 1;
             this.DataInput.TextChanged += new System.EventHandler(this.DataInput_TextChanged);
             // 
@@ -77,11 +77,12 @@ namespace StretchingForm
             this.BigTextBox.Location = new System.Drawing.Point(36, 162);
             this.BigTextBox.Multiline = true;
             this.BigTextBox.Name = "BigTextBox";
-            this.BigTextBox.Size = new System.Drawing.Size(590, 511);
+            this.BigTextBox.Size = new System.Drawing.Size(591, 522);
             this.BigTextBox.TabIndex = 1;
             // 
             // SendTextButton
             // 
+            this.SendTextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SendTextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SendTextButton.Location = new System.Drawing.Point(706, 195);
             this.SendTextButton.Name = "SendTextButton";
@@ -95,7 +96,7 @@ namespace StretchingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 725);
+            this.ClientSize = new System.Drawing.Size(940, 736);
             this.Controls.Add(this.SendTextButton);
             this.Controls.Add(this.BigTextBox);
             this.Controls.Add(this.panel1);
