@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinQuestion", "WinQuestion\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithLists", "WorkingWithLists\WorkingWithLists.csproj", "{7825753D-B5EE-4790-98CC-CB6F968BD862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinContainer", "WinContainer\WinContainer.csproj", "{49FF0ACB-8DB2-4EA9-AE47-8F2AFF32A49F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7825753D-B5EE-4790-98CC-CB6F968BD862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7825753D-B5EE-4790-98CC-CB6F968BD862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7825753D-B5EE-4790-98CC-CB6F968BD862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FF0ACB-8DB2-4EA9-AE47-8F2AFF32A49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FF0ACB-8DB2-4EA9-AE47-8F2AFF32A49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FF0ACB-8DB2-4EA9-AE47-8F2AFF32A49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FF0ACB-8DB2-4EA9-AE47-8F2AFF32A49F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
