@@ -41,8 +41,8 @@ namespace BiblWorm
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.numDaysUsed = new System.Windows.Forms.NumericUpDown();
-            this.numBoxInventNum = new System.Windows.Forms.NumericUpDown();
+            this.numBoxDaysUsed = new System.Windows.Forms.NumericUpDown();
+            this.numBoxInvNum = new System.Windows.Forms.NumericUpDown();
             this.numBoxYear = new System.Windows.Forms.NumericUpDown();
             this.numBoxPages = new System.Windows.Forms.NumericUpDown();
             this.textBoxPublisher = new System.Windows.Forms.TextBox();
@@ -52,12 +52,32 @@ namespace BiblWorm
             this.richTextBoxBookInfo = new System.Windows.Forms.RichTextBox();
             this.buttViewBook = new System.Windows.Forms.Button();
             this.chkBoxSortBooks = new System.Windows.Forms.CheckBox();
+            this.textBoxMagVol = new System.Windows.Forms.TextBox();
+            this.textBoxMagTitle = new System.Windows.Forms.TextBox();
+            this.numBoxMagYear = new System.Windows.Forms.NumericUpDown();
+            this.numBoxMagInvNum = new System.Windows.Forms.NumericUpDown();
+            this.numBoxMagDaysUsed = new System.Windows.Forms.NumericUpDown();
+            this.buttAddMag = new System.Windows.Forms.Button();
+            this.chkBoxMagOntime = new System.Windows.Forms.CheckBox();
+            this.chkBoxMagAvail = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numBoxMagNum = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.Books.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDaysUsed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBoxInventNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxDaysUsed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxInvNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBoxYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBoxPages)).BeginInit();
+            this.Magazines.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagInvNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagDaysUsed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagNum)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -85,8 +105,8 @@ namespace BiblWorm
             this.Books.Controls.Add(this.label3);
             this.Books.Controls.Add(this.label2);
             this.Books.Controls.Add(this.label1);
-            this.Books.Controls.Add(this.numDaysUsed);
-            this.Books.Controls.Add(this.numBoxInventNum);
+            this.Books.Controls.Add(this.numBoxDaysUsed);
+            this.Books.Controls.Add(this.numBoxInvNum);
             this.Books.Controls.Add(this.numBoxYear);
             this.Books.Controls.Add(this.numBoxPages);
             this.Books.Controls.Add(this.textBoxPublisher);
@@ -193,29 +213,29 @@ namespace BiblWorm
             this.label1.TabIndex = 7;
             this.label1.Text = "Автор";
             // 
-            // numDaysUsed
+            // numBoxDaysUsed
             // 
-            this.numDaysUsed.Location = new System.Drawing.Point(135, 245);
-            this.numDaysUsed.Maximum = new decimal(new int[] {
+            this.numBoxDaysUsed.Location = new System.Drawing.Point(135, 245);
+            this.numBoxDaysUsed.Maximum = new decimal(new int[] {
             365,
             0,
             0,
             0});
-            this.numDaysUsed.Name = "numDaysUsed";
-            this.numDaysUsed.Size = new System.Drawing.Size(115, 20);
-            this.numDaysUsed.TabIndex = 6;
+            this.numBoxDaysUsed.Name = "numBoxDaysUsed";
+            this.numBoxDaysUsed.Size = new System.Drawing.Size(115, 20);
+            this.numBoxDaysUsed.TabIndex = 6;
             // 
-            // numBoxInventNum
+            // numBoxInvNum
             // 
-            this.numBoxInventNum.Location = new System.Drawing.Point(115, 205);
-            this.numBoxInventNum.Maximum = new decimal(new int[] {
+            this.numBoxInvNum.Location = new System.Drawing.Point(115, 205);
+            this.numBoxInvNum.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numBoxInventNum.Name = "numBoxInventNum";
-            this.numBoxInventNum.Size = new System.Drawing.Size(135, 20);
-            this.numBoxInventNum.TabIndex = 5;
+            this.numBoxInvNum.Name = "numBoxInvNum";
+            this.numBoxInvNum.Size = new System.Drawing.Size(135, 20);
+            this.numBoxInvNum.TabIndex = 5;
             // 
             // numBoxYear
             // 
@@ -265,6 +285,21 @@ namespace BiblWorm
             // Magazines
             // 
             this.Magazines.BackColor = System.Drawing.SystemColors.Control;
+            this.Magazines.Controls.Add(this.numBoxMagNum);
+            this.Magazines.Controls.Add(this.label8);
+            this.Magazines.Controls.Add(this.label9);
+            this.Magazines.Controls.Add(this.label10);
+            this.Magazines.Controls.Add(this.label12);
+            this.Magazines.Controls.Add(this.label13);
+            this.Magazines.Controls.Add(this.label14);
+            this.Magazines.Controls.Add(this.buttAddMag);
+            this.Magazines.Controls.Add(this.chkBoxMagOntime);
+            this.Magazines.Controls.Add(this.chkBoxMagAvail);
+            this.Magazines.Controls.Add(this.numBoxMagDaysUsed);
+            this.Magazines.Controls.Add(this.numBoxMagInvNum);
+            this.Magazines.Controls.Add(this.numBoxMagYear);
+            this.Magazines.Controls.Add(this.textBoxMagTitle);
+            this.Magazines.Controls.Add(this.textBoxMagVol);
             this.Magazines.Location = new System.Drawing.Point(4, 22);
             this.Magazines.Name = "Magazines";
             this.Magazines.Padding = new System.Windows.Forms.Padding(3);
@@ -305,6 +340,153 @@ namespace BiblWorm
             this.chkBoxSortBooks.Text = "Сортировать по инв. номеру";
             this.chkBoxSortBooks.UseVisualStyleBackColor = true;
             // 
+            // textBoxMagVol
+            // 
+            this.textBoxMagVol.Location = new System.Drawing.Point(115, 17);
+            this.textBoxMagVol.Name = "textBoxMagVol";
+            this.textBoxMagVol.Size = new System.Drawing.Size(135, 20);
+            this.textBoxMagVol.TabIndex = 1;
+            // 
+            // textBoxMagTitle
+            // 
+            this.textBoxMagTitle.Location = new System.Drawing.Point(115, 87);
+            this.textBoxMagTitle.Name = "textBoxMagTitle";
+            this.textBoxMagTitle.Size = new System.Drawing.Size(135, 20);
+            this.textBoxMagTitle.TabIndex = 3;
+            // 
+            // numBoxMagYear
+            // 
+            this.numBoxMagYear.Location = new System.Drawing.Point(115, 135);
+            this.numBoxMagYear.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numBoxMagYear.Name = "numBoxMagYear";
+            this.numBoxMagYear.Size = new System.Drawing.Size(135, 20);
+            this.numBoxMagYear.TabIndex = 4;
+            // 
+            // numBoxMagInvNum
+            // 
+            this.numBoxMagInvNum.Location = new System.Drawing.Point(115, 170);
+            this.numBoxMagInvNum.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numBoxMagInvNum.Name = "numBoxMagInvNum";
+            this.numBoxMagInvNum.Size = new System.Drawing.Size(135, 20);
+            this.numBoxMagInvNum.TabIndex = 5;
+            // 
+            // numBoxMagDaysUsed
+            // 
+            this.numBoxMagDaysUsed.Location = new System.Drawing.Point(135, 215);
+            this.numBoxMagDaysUsed.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
+            this.numBoxMagDaysUsed.Name = "numBoxMagDaysUsed";
+            this.numBoxMagDaysUsed.Size = new System.Drawing.Size(115, 20);
+            this.numBoxMagDaysUsed.TabIndex = 7;
+            // 
+            // buttAddMag
+            // 
+            this.buttAddMag.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttAddMag.Location = new System.Drawing.Point(43, 334);
+            this.buttAddMag.Name = "buttAddMag";
+            this.buttAddMag.Size = new System.Drawing.Size(180, 30);
+            this.buttAddMag.TabIndex = 19;
+            this.buttAddMag.Text = "Добавить";
+            this.buttAddMag.UseVisualStyleBackColor = true;
+            this.buttAddMag.Click += new System.EventHandler(this.buttAddMag_Click);
+            // 
+            // chkBoxMagOntime
+            // 
+            this.chkBoxMagOntime.AutoSize = true;
+            this.chkBoxMagOntime.Location = new System.Drawing.Point(145, 260);
+            this.chkBoxMagOntime.Name = "chkBoxMagOntime";
+            this.chkBoxMagOntime.Size = new System.Drawing.Size(104, 17);
+            this.chkBoxMagOntime.TabIndex = 18;
+            this.chkBoxMagOntime.Text = "Возврат в срок";
+            this.chkBoxMagOntime.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxMagAvail
+            // 
+            this.chkBoxMagAvail.AutoSize = true;
+            this.chkBoxMagAvail.Location = new System.Drawing.Point(24, 260);
+            this.chkBoxMagAvail.Name = "chkBoxMagAvail";
+            this.chkBoxMagAvail.Size = new System.Drawing.Size(69, 17);
+            this.chkBoxMagAvail.TabIndex = 17;
+            this.chkBoxMagAvail.Text = "Наличие";
+            this.chkBoxMagAvail.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Срок пользования";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 176);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Инв. номер";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Год выхода";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 91);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Название";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 56);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Номер";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Том";
+            // 
+            // numBoxMagNum
+            // 
+            this.numBoxMagNum.Location = new System.Drawing.Point(115, 52);
+            this.numBoxMagNum.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numBoxMagNum.Name = "numBoxMagNum";
+            this.numBoxMagNum.Size = new System.Drawing.Size(135, 20);
+            this.numBoxMagNum.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,10 +502,16 @@ namespace BiblWorm
             this.tabControl1.ResumeLayout(false);
             this.Books.ResumeLayout(false);
             this.Books.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDaysUsed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBoxInventNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxDaysUsed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxInvNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBoxYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBoxPages)).EndInit();
+            this.Magazines.ResumeLayout(false);
+            this.Magazines.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagInvNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagDaysUsed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBoxMagNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,8 +531,8 @@ namespace BiblWorm
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numDaysUsed;
-        private System.Windows.Forms.NumericUpDown numBoxInventNum;
+        private System.Windows.Forms.NumericUpDown numBoxDaysUsed;
+        private System.Windows.Forms.NumericUpDown numBoxInvNum;
         private System.Windows.Forms.NumericUpDown numBoxYear;
         private System.Windows.Forms.NumericUpDown numBoxPages;
         private System.Windows.Forms.TextBox textBoxPublisher;
@@ -354,6 +542,21 @@ namespace BiblWorm
         private System.Windows.Forms.RichTextBox richTextBoxBookInfo;
         private System.Windows.Forms.Button buttViewBook;
         private System.Windows.Forms.CheckBox chkBoxSortBooks;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button buttAddMag;
+        private System.Windows.Forms.CheckBox chkBoxMagOntime;
+        private System.Windows.Forms.CheckBox chkBoxMagAvail;
+        private System.Windows.Forms.NumericUpDown numBoxMagDaysUsed;
+        private System.Windows.Forms.NumericUpDown numBoxMagInvNum;
+        private System.Windows.Forms.NumericUpDown numBoxMagYear;
+        private System.Windows.Forms.TextBox textBoxMagTitle;
+        private System.Windows.Forms.TextBox textBoxMagVol;
+        private System.Windows.Forms.NumericUpDown numBoxMagNum;
     }
 }
 
