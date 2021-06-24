@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinContainer", "WinContaine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblWorm", "BiblWorm\BiblWorm.csproj", "{6AC87EC5-E370-4770-AFCB-BD2803928052}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationForm", "RegistrationForm\RegistrationForm.csproj", "{DB54B04D-D996-4363-BBAE-B491B171AB55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6AC87EC5-E370-4770-AFCB-BD2803928052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC87EC5-E370-4770-AFCB-BD2803928052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AC87EC5-E370-4770-AFCB-BD2803928052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB54B04D-D996-4363-BBAE-B491B171AB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB54B04D-D996-4363-BBAE-B491B171AB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB54B04D-D996-4363-BBAE-B491B171AB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB54B04D-D996-4363-BBAE-B491B171AB55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
