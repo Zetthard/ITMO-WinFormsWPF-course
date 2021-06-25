@@ -27,9 +27,13 @@ namespace WPFHello
 
             SetButton.IsEnabled = false;
             RetButton.IsEnabled = false;
+            Top = 25;
+            Left = 25;
         }
 
         bool isDataDirety = false;
+
+        public SecondWindow MyWin { get; set; }
 
         private void SetButton_Click(object sender, RoutedEventArgs e)
         {
@@ -94,6 +98,18 @@ namespace WPFHello
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void SecWinButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyWin == null)
+                MyWin = new SecondWindow();
+            MyWin.Owner = this;
+
+            var location = SecWinButton.PointToScreen(new Point(0, 0));
+            MyWin.Top = location.Y;
+            MyWin.Left = location.X + MyWin.Width / 2;
+            MyWin.Show();
         }
     }
 }
