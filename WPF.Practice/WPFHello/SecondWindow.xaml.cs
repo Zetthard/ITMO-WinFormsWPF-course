@@ -45,6 +45,7 @@ namespace WPFHello
             Window1 = Owner as MainWindow;
             if (Window1 != null)
                 Window1.SetText.Text = TextBox2.Text;
+            PrintLogFile();
             Close();
         }
 
@@ -53,5 +54,13 @@ namespace WPFHello
             Window1.MyWin = null;
         }
 
+        private void PrintLogFile()
+        {
+            using (System.IO.StreamWriter writer = new System.IO.StreamWriter("log.txt", true))
+            {
+                writer.WriteLine("Внесено {0}: {1} ", TextBox2.Text, DateTime.Now.ToShortDateString() + ", время: " + DateTime.Now.ToLongTimeString());
+                writer.Flush();
+            }
+        }
     }
 }
