@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHello", "WPFHello\WPFHello.csproj", "{E7600843-9A39-4650-B051-12570F0BC560}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppNavi", "WpfAppNavi\WpfAppNavi.csproj", "{0615EE43-21CA-4C58-BF11-A6C1B25B092B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E7600843-9A39-4650-B051-12570F0BC560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7600843-9A39-4650-B051-12570F0BC560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7600843-9A39-4650-B051-12570F0BC560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
