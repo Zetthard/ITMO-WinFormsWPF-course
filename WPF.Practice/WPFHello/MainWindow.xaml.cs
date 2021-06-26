@@ -31,17 +31,19 @@ namespace WPFHello
             Left = 25;
         }
 
-        bool isDataDirety = false;
+        private string Filename = "username.txt";
+
+        bool isDataDirty = false;
 
         public SecondWindow MyWin { get; set; }
 
-        private void SetButton_Click(object sender, RoutedEventArgs e)
+        private void SetButtonWrite()
         {
-            System.IO.StreamWriter sw = null;
+            System.IO.StreamWriter sw2 = null;
             try
             {
-                sw = new System.IO.StreamWriter("username.txt");
-                sw.WriteLine(SetText.Text);
+                sw2 = new System.IO.StreamWriter("username.txt");
+                sw2.WriteLine(SetText.Text);
             }
             catch (Exception ex)
             {
@@ -49,21 +51,21 @@ namespace WPFHello
             }
             finally
             {
-                if (sw != null)
-                    sw.Close();
+                if (sw2 != null)
+                    sw2.Close();
             }
 
-            isDataDirety = false;
+            isDataDirty = false;
             RetButton.IsEnabled = true;
         }
 
-        private void RetButton_Click(object sender, RoutedEventArgs e)
+        private void RetButtonRead()
         {
-            System.IO.StreamReader sr = null;
+            System.IO.StreamReader sr2 = null;
             try
             {
-                using (sr = new System.IO.StreamReader("username.txt"))
-                    RetLabel.Content = "Very Good morning, dear " + sr.ReadToEnd();
+                using (sr2 = new System.IO.StreamReader(Filename))
+                    RetLabel.Content = "Very Good morning, dear " + sr2.ReadToEnd();
             }
             catch (Exception ex)
             {
@@ -71,20 +73,20 @@ namespace WPFHello
             }
             finally
             {
-                if (sr != null)
-                    sr.Close();
+                if (sr2 != null)
+                    sr2.Close();
             }
         }
 
         private void SetText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            isDataDirety = true;
+            isDataDirty = true;
             SetButton.IsEnabled = true;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (isDataDirety)
+            if (isDataDirty)
             {
                 string msg = "Данные были изменены, но не сохранены!\n Зарыть окно без сохранения?";
                 MessageBoxResult result = MessageBox.Show(msg, "Контроль данных.", MessageBoxButton.YesNo, MessageBoxImage.Warning);
@@ -110,6 +112,31 @@ namespace WPFHello
             MyWin.Top = location.Y;
             MyWin.Left = location.X + MyWin.Width / 2;
             MyWin.Show();
+        }
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement FeSource = e.Source as FrameworkElement;
+            try
+            {
+                switch (FeSource.Name)
+                {
+                    case "SetButton":
+                        SetButtonWrite();
+                        break;
+
+                    case "RetButton":
+                        RetButtonRead();
+                        break;
+                }
+
+                e.Handled = true;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
