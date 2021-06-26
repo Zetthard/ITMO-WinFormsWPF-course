@@ -1,0 +1,15 @@
+﻿<Window TextBoxBase.TextChanged="Window_TextChanged" x:Class="WPFRoutedEvent1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFRoutedEvent1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid TextBoxBase.TextChanged="Grid_TextChanged">
+        <TextBox HorizontalAlignment="Left" Height="338" Margin="402,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="339" TextChanged="TextBox_TextChanged"/>
+        <RadioButton x:Name="RadioButton1" Content="Handle by Textbox" HorizontalAlignment="Left" Margin="117,205,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButton2" Content="Handle by Grid" HorizontalAlignment="Left" Margin="117,250,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButton3" Content="Handle by Window" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

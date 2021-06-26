@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHello", "WPFHello\WPFHel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppNavi", "WpfAppNavi\WpfAppNavi.csproj", "{0615EE43-21CA-4C58-BF11-A6C1B25B092B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFRoutedEvent1", "WPFRoutedEvent1\WPFRoutedEvent1.csproj", "{C6419A96-E61A-461B-ADBC-A09242601327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0615EE43-21CA-4C58-BF11-A6C1B25B092B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6419A96-E61A-461B-ADBC-A09242601327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6419A96-E61A-461B-ADBC-A09242601327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6419A96-E61A-461B-ADBC-A09242601327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6419A96-E61A-461B-ADBC-A09242601327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
