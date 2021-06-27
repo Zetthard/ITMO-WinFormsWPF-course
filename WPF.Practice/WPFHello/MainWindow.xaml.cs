@@ -23,7 +23,6 @@ namespace WPFHello
         public MainWindow()
         {
             InitializeComponent();
-            mainlabel.Content = "Good morning!";
 
             SetButton.IsEnabled = false;
             RetButton.IsEnabled = false;
@@ -109,7 +108,7 @@ namespace WPFHello
             MyWin.Owner = this;
 
             var location = SecWinButton.PointToScreen(new Point(0, 0));
-            MyWin.Top = location.Y;
+            MyWin.Top = location.Y * 0.75;
             MyWin.Left = location.X + MyWin.Width / 2;
             MyWin.Show();
         }
