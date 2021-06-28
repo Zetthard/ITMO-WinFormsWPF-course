@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFRoutedEvent1", "WPFRoute
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFRoutedEvent2", "WPFRoutedEvent2\WPFRoutedEvent2.csproj", "{93EA2531-55DC-4AC5-AD90-2FB4252AE705}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogWindows", "DialogWindows\DialogWindows.csproj", "{03211308-2DDD-4462-82D3-AE23C6C03564}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{93EA2531-55DC-4AC5-AD90-2FB4252AE705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93EA2531-55DC-4AC5-AD90-2FB4252AE705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93EA2531-55DC-4AC5-AD90-2FB4252AE705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03211308-2DDD-4462-82D3-AE23C6C03564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03211308-2DDD-4462-82D3-AE23C6C03564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03211308-2DDD-4462-82D3-AE23C6C03564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03211308-2DDD-4462-82D3-AE23C6C03564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

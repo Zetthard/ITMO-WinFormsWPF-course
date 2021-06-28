@@ -12,7 +12,11 @@
             <MenuItem Header="File">
                 <MenuItem Header="Exit" Click="MenuItem_Click"/>
             </MenuItem>
-        </Menu>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" CommandTarget="{Binding ElementName=MainWindow}" Command="Copy"/>
+                <MenuItem Header="Cut" CommandTarget="{Binding ElementName=MainWindow}" Command="Cut"/>
+                <MenuItem Header="Paste" CommandTarget="{Binding ElementName=MainWindow}" Command="Paste"/>
+            </MenuItem>        </Menu>
 
         <StatusBar x:Name="stb" DockPanel.Dock="Bottom" Background="#FF484848">
             <StatusBarItem x:Name="statbar1">
