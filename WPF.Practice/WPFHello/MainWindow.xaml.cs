@@ -28,6 +28,11 @@ namespace WPFHello
             RetButton.IsEnabled = false;
             Top = 25;
             Left = 25;
+            CommandBinding abinding = new CommandBinding();
+            abinding.Command = CustomCommands.Launch;
+            abinding.Executed += new ExecutedRoutedEventHandler(Launch_Handler);
+            abinding.CanExecute += new CanExecuteRoutedEventHandler(LaunchEnabled_Handler);
+            this.CommandBindings.Add(abinding);
         }
 
         private string Filename = "username.txt";
@@ -101,18 +106,6 @@ namespace WPFHello
             Close();
         }
 
-        private void SecWinButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MyWin == null)
-                MyWin = new SecondWindow();
-            MyWin.Owner = this;
-
-            var location = SecWinButton.PointToScreen(new Point(0, 0));
-            MyWin.Top = location.Y;
-            MyWin.Left = location.X + MyWin.Width;
-            MyWin.Show();
-        }
-
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
             FrameworkElement FeSource = e.Source as FrameworkElement;
@@ -136,6 +129,23 @@ namespace WPFHello
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LaunchEnabled_Handler(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = (bool)statBarCheckBox.IsChecked;
+        }
+
+        private void Launch_Handler(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (MyWin == null)
+                MyWin = new SecondWindow();
+            MyWin.Owner = this;
+
+            var location = SecWinButton.PointToScreen(new Point(0, 0));
+            MyWin.Top = location.Y;
+            MyWin.Left = location.X + MyWin.ActualWidth;
+            MyWin.Show();
         }
     }
 }
