@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFRoutedEvent2", "WPFRoute
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogWindows", "DialogWindows\DialogWindows.csproj", "{03211308-2DDD-4462-82D3-AE23C6C03564}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFBackgroundWorker", "WPFBackgroundWorker\WPFBackgroundWorker.csproj", "{7FEBFD20-6C90-4346-BFCD-1E3A34B52B8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{03211308-2DDD-4462-82D3-AE23C6C03564}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03211308-2DDD-4462-82D3-AE23C6C03564}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03211308-2DDD-4462-82D3-AE23C6C03564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEBFD20-6C90-4346-BFCD-1E3A34B52B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEBFD20-6C90-4346-BFCD-1E3A34B52B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEBFD20-6C90-4346-BFCD-1E3A34B52B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEBFD20-6C90-4346-BFCD-1E3A34B52B8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
