@@ -6,20 +6,6 @@
         <GradientStop Color="LawnGreen" Offset="1" />
     </LinearGradientBrush>
     <ControlTemplate x:Key="customButtonTemplate" TargetType="Button">
-        <Grid>
-            <Rectangle>
-                <Rectangle.Fill>
-                    <RadialGradientBrush >
-                        <GradientStop Color="Blue" Offset="0" />
-                        <GradientStop Color="BlueViolet" Offset="1" />
-                    </RadialGradientBrush>
-                </Rectangle.Fill>
-                <Rectangle.LayoutTransform>
-                    <RotateTransform x:Name="rotateTrans" Angle="45" />
-                </Rectangle.LayoutTransform>
-            </Rectangle>
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.EnterActions>
@@ -34,6 +20,10 @@
                 <Trigger.ExitActions>
                     <StopStoryboard BeginStoryboardName="Storyboard" />
                 </Trigger.ExitActions>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="TextElement.Foreground" Value="#FF272727"/>
+                <Setter Property="Background" Value="Black"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

@@ -141,10 +141,6 @@ namespace WPFHello
             if (MyWin == null)
                 MyWin = new SecondWindow();
             MyWin.Owner = this;
-
-            var location = SecWinButton.PointToScreen(new Point(0, 0));
-            MyWin.Top = location.Y;
-            MyWin.Left = location.X + MyWin.ActualWidth;
             MyWin.Show();
         }
     }
