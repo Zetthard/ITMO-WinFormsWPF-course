@@ -8,7 +8,8 @@
         Title="First WPF App" Height="350" Width="500" MinHeight="350" MinWidth="500" Style="{DynamicResource MainWindowStyle}"
  Closing="Window_Closing" Background="#FF3A3A3A">
     <Window.Resources>
-        <SolidColorBrush x:Key="MyBrush" Color="Gold"/>        <Style TargetType="Button">
+        <SolidColorBrush x:Key="MyBrush" Color="Gold"/>
+        <Style TargetType="Button">
             <Setter Property="Width" Value="85"/>
             <Setter Property="Background" Value="{StaticResource ControlDarkerBackground}"/>
             <Setter Property="Foreground" Value="{StaticResource MyBrush}"/>
@@ -17,6 +18,27 @@
             <Setter Property="BorderBrush" Value="Gold"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Padding" Value="0,3,0,3"/>
+        </Style>
+        <Style x:Key="FontTextBox">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Calibri"></Setter>
+                <Setter Property="Control.FontSize" Value="14"></Setter>
+                <Setter Property="TextBox.VerticalContentAlignment" Value="Center"></Setter>
+            </Style.Setters>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Control.IsMouseOver" Value="True" />
+                        <Condition Property="Control.IsFocused" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Control.Foreground" Value="Red"></Setter>
+                        <Setter Property="TextBox.BorderBrush" Value="Blue"></Setter>
+                        <Setter Property="Control.FontSize" Value="18"></Setter>
+                        <Setter Property="TextBox.BorderThickness" Value="3"></Setter>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
         </Style>
     </Window.Resources>
     <DockPanel Background="Black">
@@ -29,7 +51,8 @@
                 <MenuItem Header="Copy" CommandTarget="{Binding ElementName=MainWindow}" Command="Copy"/>
                 <MenuItem Header="Cut" CommandTarget="{Binding ElementName=MainWindow}" Command="Cut"/>
                 <MenuItem Header="Paste" CommandTarget="{Binding ElementName=MainWindow}" Command="Paste"/>
-            </MenuItem>        </Menu>
+            </MenuItem>
+        </Menu>
 
         <StatusBar x:Name="stb" DockPanel.Dock="Bottom" Background="#FF484848">
             <StatusBarItem x:Name="statbar1">
@@ -62,7 +85,7 @@
             <Label x:Name="RetLabel" Content="" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,15,10,15" 
                    VerticalAlignment="Top" Background="#FF272727" Height="35" Width="325"/>
             <TextBox x:Name="SetText" Grid.Column="1" Grid.Row="0" Margin="10,15,10,15" TextWrapping="Wrap" TextChanged="SetText_TextChanged" 
-                     Background="#FF272727"/>
+                     Background="#FF272727" Style="{StaticResource ResourceKey=FontTextBox}"/>
             <Button x:Name="SecWinButton" Content="New window" Command="Local:CustomCommands.Launch" Grid.Column="0" Grid.Row="2" 
                     HorizontalAlignment="Left" Margin="31,24.2,0,0" VerticalAlignment="Top"/>
             <TextBlock Grid.Column="1" Grid.Row="2" Margin="10,15,10,15" TextWrapping="Wrap" Background="#FF272727"/>
