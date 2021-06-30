@@ -56,10 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BoolToBrushConverter.cs" />
     <Compile Include="CustomCommands.cs" />
     <Compile Include="SecondWindow.xaml.cs">
       <DependentUpon>SecondWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs" />
     <Compile Include="Themes\ColourfulDarkTheme.xaml.cs" />
     <Compile Include="Themes\ColourfulLightTheme.xaml.cs" />
     <Compile Include="Themes\DarkTheme.xaml.cs" />

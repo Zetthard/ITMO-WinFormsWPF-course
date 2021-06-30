@@ -10,14 +10,21 @@
     <Window.Resources>
         <SolidColorBrush x:Key="MyBrush" Color="Gold"/>
         <Style TargetType="Button">
-            <Setter Property="Width" Value="85"/>
-            <Setter Property="Background" Value="{StaticResource ControlDarkerBackground}"/>
-            <Setter Property="Foreground" Value="{StaticResource MyBrush}"/>
-            <Setter Property="FontFamily" Value="Trebuchet MS"/>
-            <Setter Property="FontSize" Value="13"/>
-            <Setter Property="BorderBrush" Value="Gold"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Padding" Value="0,3,0,3"/>
+            <Style.Setters>
+                <Setter Property="Width" Value="85"/>
+                <Setter Property="Background" Value="{StaticResource ControlDarkerBackground}"/>
+                <Setter Property="Foreground" Value="{StaticResource MyBrush}"/>
+                <Setter Property="FontFamily" Value="Trebuchet MS"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="BorderBrush" Value="Gold"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Padding" Value="0,3,0,3"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property = "Foreground" Value="OrangeRed"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <Style x:Key="FontTextBox">
             <Style.Setters>

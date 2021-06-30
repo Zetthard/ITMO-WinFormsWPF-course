@@ -44,7 +44,7 @@ namespace WPFHello
         {
             Window1 = Owner as MainWindow;
             if (Window1 != null)
-                Window1.SetText.Text = TextBox2.Text;
+                Window1.SetText.Text = TextBox2.Text + ListBoxSecondWindow.SelectedItem; //ну и как это сделать?
             PrintLogFile();
             Close();
         }
@@ -61,6 +61,11 @@ namespace WPFHello
                 writer.WriteLine("Внесено {0}: {1} ", TextBox2.Text, DateTime.Now.ToShortDateString() + ", время: " + DateTime.Now.ToLongTimeString());
                 writer.Flush();
             }
+        }
+
+        private void ListBoxSecondWindow_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
