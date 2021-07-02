@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFRoutedEvent2
+namespace RoutedEvent2
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

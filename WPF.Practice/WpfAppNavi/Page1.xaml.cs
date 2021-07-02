@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfAppNavi
+namespace AppNavi
 {
     /// <summary>
     /// Логика взаимодействия для Page1.xaml

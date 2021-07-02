@@ -1,7 +1,7 @@
-﻿<Application x:Class="AppNavi.App"
+﻿<Application x:Class="UserForms.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AppNavi"
+             xmlns:local="clr-namespace:UserForms"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
