@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="UserControl.ShowNumberControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Local="clr-namespace:UserControl"
+             mc:Ignorable="d" Height="75" Width="230">
+    <Grid Margin="1,1,1,1">
+        <Label x:Name="NumberDisplay" Content="" HorizontalAlignment="Center" Height="60" Margin="5,5,5,5" VerticalAlignment="Top" Width="221"/>
+
+    </Grid>
+</UserControl>
