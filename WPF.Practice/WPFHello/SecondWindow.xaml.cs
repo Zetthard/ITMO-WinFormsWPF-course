@@ -44,8 +44,7 @@ namespace WPFHello
         {
             Window1 = Owner as MainWindow;
             if (Window1 != null)
-                Window1.SetText.Text = TextBox2.Text + ListBoxSecondWindow.SelectedItem; //ну и как это сделать?
-            PrintLogFile();
+                Window1.SetText.Text = TextBox2.Text + ListBoxSecondWindow.SelectedItem.ToString();
             Close();
         }
 

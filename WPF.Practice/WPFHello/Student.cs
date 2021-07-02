@@ -17,6 +17,11 @@ namespace WPFHello
             IsEnrolled = ch;
         }
         public string FullStudentData => StudentName + "\t" + IsEnrolled;
+
+        public override string ToString()
+        {
+            return StudentName;
+        }
     }
 
     class StudentList : ObservableCollection<Student>
@@ -30,5 +35,4 @@ namespace WPFHello
             Add(new Student("Elena Diva", false));
         }
     }
-
 }
