@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{785FF625-45C7-4F55-8CEA-9CB2CE11AD0F}</ProjectGuid>
+    <ProjectGuid>{5298280D-F0E1-401E-ADC7-1654628B3D25}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Unmanaged.Excel</RootNamespace>
-    <AssemblyName>Unmanaged.Excel</AssemblyName>
+    <RootNamespace>WinBackgroundWorker</RootNamespace>
+    <AssemblyName>WinBackgroundWorker</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

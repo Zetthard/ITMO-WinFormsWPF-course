@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{785FF625-45C7-4F55-8CEA-9CB2CE11AD0F}</ProjectGuid>
+    <ProjectGuid>{F63FCDE1-FEB4-450C-8226-8C856C7411DB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Unmanaged.Excel</RootNamespace>
-    <AssemblyName>Unmanaged.Excel</AssemblyName>
+    <RootNamespace>WinAsyncDelegate</RootNamespace>
+    <AssemblyName>WinAsyncDelegate</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
