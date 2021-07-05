@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinAsyncDelegate", "WinAsyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinAsyncMethod", "WinAsyncMethod\WinAsyncMethod.csproj", "{3A7E1D87-175F-4AB6-800C-EB0621BAE07E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinAsyncEratosfen", "WinAsyncEratosfen\WinAsyncEratosfen.csproj", "{F264C932-89D6-4FA6-820B-8E024E625145}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3A7E1D87-175F-4AB6-800C-EB0621BAE07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7E1D87-175F-4AB6-800C-EB0621BAE07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A7E1D87-175F-4AB6-800C-EB0621BAE07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F264C932-89D6-4FA6-820B-8E024E625145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F264C932-89D6-4FA6-820B-8E024E625145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F264C932-89D6-4FA6-820B-8E024E625145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F264C932-89D6-4FA6-820B-8E024E625145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
