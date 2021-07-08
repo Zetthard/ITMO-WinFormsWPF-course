@@ -15,27 +15,23 @@ using System.Windows.Shapes;
 namespace DialogWindows
 {
     /// <summary>
-    /// Логика взаимодействия для TaskWindow.xaml
+    /// Логика взаимодействия для PasswordWindow.xaml
     /// </summary>
-    public partial class TaskWindow : Window
+    public partial class PasswordWindow : Window
     {
-        public string ViewModel { get; set; }
-
-        public TaskWindow()
+        public PasswordWindow()
         {
             InitializeComponent();
         }
 
-        public void ShowViewModel()
+        public string Password
         {
-            this.Title = ViewModel;
+            get { return MyPasswordBox.Password; }
         }
 
-        private void ButtonSend_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd1 = this.Owner as MainWindow;
-            wnd1.ButtonMain.Content = TextBoxWind2.Text;
-            wnd1.Background = new SolidColorBrush(Colors.Green);
+            this.DialogResult = true;
         }
     }
 }
