@@ -33,7 +33,7 @@ namespace WPFCalculator
         private const string eightOut = "8";
         private const string nineOut = "9";
         private const string zeroOut = "0";
-        private static Mode mode = Mode.standard;
+        private static Mode mode = Mode.standard;  
 
         public enum Mode : int
         { standard = 0, scientific = 1 }
