@@ -18,15 +18,16 @@ namespace WPFCalculator
             eAdd = 1,
             eSubtract = 2,
             eMultiply = 3,
-            eDivide = 4
+            eDivide = 4,
+            ePow = 5
         }
 
         //
         // Module-Level Constants
         //
 
-        private static double negativeConverter = -1;
-        private static string versionInfo = "Calculator v2.0.1.1";
+        private static readonly double negativeConverter = -1;
+        private static readonly string versionInfo = "Calculator v3.0.1.1";
 
         //
         // Module-level Variables.
@@ -78,7 +79,7 @@ namespace WPFCalculator
 
         public static string CalcNumber(string KeyNumber)
         {
-            stringAnswer = stringAnswer + KeyNumber;
+            stringAnswer += KeyNumber;
             return (stringAnswer);
         }
 
@@ -90,7 +91,7 @@ namespace WPFCalculator
         {
             if (stringAnswer != "" && !secondNumberAdded)
             {
-                firstNumber = System.Convert.ToDouble(stringAnswer);
+                firstNumber = Convert.ToDouble(stringAnswer);
                 calcOperation = calcOper;
                 stringAnswer = "";
                 decimalAdded = false;
@@ -107,8 +108,8 @@ namespace WPFCalculator
 
             if (stringAnswer != "")
             {
-                numHold = System.Convert.ToDouble(stringAnswer);
-                stringAnswer = System.Convert.ToString(numHold * negativeConverter);
+                numHold = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(numHold * negativeConverter);
             }
 
             return (stringAnswer);
@@ -123,9 +124,9 @@ namespace WPFCalculator
             if (!decimalAdded && !secondNumberAdded)
             {
                 if (stringAnswer != "")
-                    stringAnswer = stringAnswer + ".";
+                    stringAnswer += ",";
                 else
-                    stringAnswer = "0.";
+                    stringAnswer = "0,";
 
                 decimalAdded = true;
             }
@@ -139,49 +140,112 @@ namespace WPFCalculator
 
         public static string CalcEqual()
         {
-            bool validEquation = false;
-
             if (stringAnswer != "")
             {
-                secondNumber = System.Convert.ToDouble(stringAnswer);
+                secondNumber = Convert.ToDouble(stringAnswer);
                 secondNumberAdded = true;
 
                 switch (calcOperation)
                 {
                     case Operator.eUnknown:
-                        validEquation = false;
                         break;
 
                     case Operator.eAdd:
                         numericAnswer = firstNumber + secondNumber;
-                        validEquation = true;
                         break;
 
                     case Operator.eSubtract:
                         numericAnswer = firstNumber - secondNumber;
-                        validEquation = true;
                         break;
 
                     case Operator.eMultiply:
                         numericAnswer = firstNumber * secondNumber;
-                        validEquation = true;
                         break;
 
                     case Operator.eDivide:
                         numericAnswer = firstNumber / secondNumber;
-                        validEquation = true;
+                        break;
+                    case Operator.ePow:
+                        numericAnswer = Math.Pow(firstNumber, secondNumber);
                         break;
 
                     default:
-                        validEquation = false;
                         break;
                 }
-
-                if (validEquation)
-                    stringAnswer = System.Convert.ToString(numericAnswer);
+                decimalAdded = true;
             }
+            return Convert.ToString(numericAnswer);
+        }
 
+        public static string CalcPercent()
+        {
+            if (stringAnswer != "" && !secondNumberAdded)
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(firstNumber / 100);
+            }
+            return stringAnswer;
+        }
+
+        public static string CalcSquare()
+        {
+            if (stringAnswer != "")
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(firstNumber * firstNumber);
+            }
             return (stringAnswer);
+        }
+
+        public static string CalcCube()
+        {
+            if (stringAnswer != "")
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(firstNumber * firstNumber * firstNumber);
+            }
+            return (stringAnswer);
+        }
+
+        public static string CalcSqrt()
+        {
+            if (stringAnswer != "")
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(Math.Sqrt(firstNumber));
+            }
+            return (stringAnswer);
+        }
+
+        public static string CalcCubert()
+        {
+            if (stringAnswer != "")
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(Math.Pow(firstNumber, (double) 1/3));
+            }
+            return (stringAnswer);
+        }
+
+        public static string CalcOneOverX()
+        {
+            if (stringAnswer != "")
+            {
+                firstNumber = Convert.ToDouble(stringAnswer);
+                stringAnswer = Convert.ToString(1 / firstNumber);
+            }
+            return (stringAnswer);
+        }
+
+        public static int CalcFact()
+        {
+            int fact = 1;
+            if (int.TryParse(stringAnswer, out int number))
+            {
+                for (int x = 1; x <= number; x++)
+                    fact *= x;
+            }
+            return fact;
         }
 
         //
@@ -196,6 +260,14 @@ namespace WPFCalculator
             stringAnswer = "";
             calcOperation = Operator.eUnknown;
             decimalAdded = false;
+            secondNumberAdded = false;
+        }
+
+        public static void CalcEqualPressed()
+        {
+            stringAnswer = Convert.ToString(numericAnswer);
+            secondNumber = 0;
+            calcOperation = Operator.eUnknown;
             secondNumberAdded = false;
         }
     }

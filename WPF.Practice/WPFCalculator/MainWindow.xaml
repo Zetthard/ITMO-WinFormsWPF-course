@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Local="clr-namespace:WPFCalculator"
         mc:Ignorable="d"
-        Title="Simple Calculator" Height="450" Width="500" MinHeight="350" MinWidth="370" WindowStyle="ThreeDBorderWindow" 
+        Style="{DynamicResource MainWindowStyle}"
+        Title="Simple Calculator" Height="450" Width="480" MinHeight="350" MinWidth="370" WindowStyle="ThreeDBorderWindow" 
         Topmost="True" WindowStartupLocation="CenterScreen" Cursor="Hand">
     <DockPanel>
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top" DockPanel.Dock="Top">
@@ -13,10 +14,12 @@
                 <MenuItem x:Name="Exit" Header="Exit" Click="MenuExit_Click"/>
             </MenuItem>
             <MenuItem x:Name="MenuView" Header="View">
-                <ListBoxItem Content="Dark Theme" Selected="ListBoxItem_Selected"/>
-                <ListBoxItem Content="Light Theme" Selected="ListBoxItem_Selected_1"/>
-                <ListBoxItem Content="Colourful Darl" Selected="ListBoxItem_Selected_3"/>
-                <ListBoxItem Content="Colourful Light" Selected="ListBoxItem_Selected_2"/>
+                <MenuItem x:Name="Standard" Header="Standard" Click="ScientificCollapse"/>
+                <MenuItem x:Name="Scientific" Header="Scientific" Click="ScientificExpand"/>
+            </MenuItem>
+            <MenuItem x:Name="Theme" Header="Theme">
+                <Button x:Name="Dark" Content="Dark" Click="ListBoxItem_Selected"/>
+                <Button x:Name="Light" Content="Light" Click="ListBoxItem_Selected_1"/>
             </MenuItem>
             <MenuItem x:Name="MenuHelp"  Header="Help">
                 <MenuItem x:Name="About" Header="About..." Click="About_Click"/>
@@ -32,35 +35,44 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition x:Name="row1" Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="{Binding Parent.ColumnDefinitions.Width.Value, Mode=OneWay, RelativeSource={RelativeSource Self}}"/>
                 </Grid.RowDefinitions>
                 <TextBox x:Name="Display" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Padding="3" 
-                         HorizontalContentAlignment="Right" IsReadOnly="True"/>
-                <Button x:Name="KeySeven" Grid.Column="0" Grid.Row="1" Content="7"/>
-                <Button x:Name="KeyEight" Grid.Column="1" Grid.Row="1" Content="8"/>
-                <Button x:Name="KeyNine" Grid.Column="2" Grid.Row="1" Content="9"/>
-                <Button x:Name="KeyFour" Grid.Column="0" Grid.Row="2" Content="4"/>
-                <Button x:Name="KeyFive" Grid.Column="1" Grid.Row="2" Content="5"/>
-                <Button x:Name="KeySix" Grid.Column="2" Grid.Row="2" Content="6"/>
-                <Button x:Name="KeyOne" Grid.Column="0" Grid.Row="3" Content="1"/>
-                <Button x:Name="KeyTwo" Grid.Column="1" Grid.Row="3" Content="2"/>
-                <Button x:Name="KeyThree" Grid.Column="2" Grid.Row="3" Content="3"/>
-                <Button x:Name="KeyDecimal" Grid.Column="0" Grid.Row="4" Content="." VerticalContentAlignment="Center"/>
-                <Button x:Name="KeyZero" Grid.Column="1" Grid.Row="4" Content="0"/>
-                <Button x:Name="KeySign" Grid.Column="2" Grid.Row="4" Content="+/-" FontSize="6" FontStretch="UltraCondensed"/>
-                <Button x:Name="KeyPercent" Grid.Column="3" Grid.Row="1" Content="%" FontSize="10"/>
-                <Button x:Name="KeyClear" Grid.Column="4" Grid.Row="1" Content="C" Background="#FFF97F7F" Click="KeyClear_Click"/>
-                <Button x:Name="KeyMultiply" Grid.Column="3" Grid.Row="2" Content="X" FontSize="10" Click="KeyMultiply_Click"/>
-                <Button x:Name="KeyDevision" Grid.Column="4" Grid.Row="2" Content="/" FontSize="10" Click="KeyDevision_Click"/>
-                <Button x:Name="KeySubstract" Grid.Column="3" Grid.Row="3" Content="-" Click="KeySubstract_Click"/>
-                <Button x:Name="KeyAdd" Grid.Column="3" Grid.Row="4" Content="+" Click="KeyAdd_Click"/>
-                <Button x:Name="KeyEqual" Grid.Column="4" Grid.Row="3" Grid.RowSpan="2" Content="=" Background="#FFE5AC45" Click="KeyEqual_Click"/>
+                         HorizontalContentAlignment="Right" IsReadOnly="True" TextChanged="Display_TextChanged"/>
+                <Button x:Name="KeySeven" Grid.Column="0" Grid.Row="3" Content="7" Height="{Binding Width, Mode=OneWay, RelativeSource={RelativeSource Self}}"/>
+                <Button x:Name="KeyEight" Grid.Column="1" Grid.Row="3" Content="8"/>
+                <Button x:Name="KeyNine" Grid.Column="2" Grid.Row="3" Content="9"/>
+                <Button x:Name="KeyFour" Grid.Column="0" Grid.Row="4" Content="4"/>
+                <Button x:Name="KeyFive" Grid.Column="1" Grid.Row="4" Content="5"/>
+                <Button x:Name="KeySix" Grid.Column="2" Grid.Row="4" Content="6"/>
+                <Button x:Name="KeyOne" Grid.Column="0" Grid.Row="5" Content="1"/>
+                <Button x:Name="KeyTwo" Grid.Column="1" Grid.Row="5" Content="2"/>
+                <Button x:Name="KeyThree" Grid.Column="2" Grid.Row="5" Content="3"/>
+                <Button x:Name="KeyDecimal" Grid.Column="0" Grid.Row="6" Content="." VerticalContentAlignment="Center" Click="KeyDecimal_Click"/>
+                <Button x:Name="KeyZero" Grid.Column="1" Grid.Row="6" Content="0"/>
+                <Button x:Name="KeySign" Grid.Column="2" Grid.Row="6" Content="+/-" FontSize="6" FontStretch="UltraCondensed" Click="KeySign_Click"/>
+                <Button x:Name="KeyPercent" Grid.Column="3" Grid.Row="3" Content="%" FontSize="10" Click="KeyPercent_Click"/>
+                <Button x:Name="KeyClear" Grid.Column="4" Grid.Row="3" Content="C" Background="#FFF97F7F" Click="KeyClear_Click"/>
+                <Button x:Name="KeyMultiply" Grid.Column="3" Grid.Row="4" Content="X" FontSize="10" Click="KeyMultiply_Click"/>
+                <Button x:Name="KeyDevision" Grid.Column="4" Grid.Row="4" Content="/" FontSize="10" Click="KeyDevision_Click"/>
+                <Button x:Name="KeySubstract" Grid.Column="3" Grid.Row="5" Content="-" Click="KeySubstract_Click"/>
+                <Button x:Name="KeyAdd" Grid.Column="3" Grid.Row="6" Content="+" Click="KeyAdd_Click"/>
+                <Button x:Name="KeyEqual" Grid.Column="4" Grid.Row="5" Grid.RowSpan="2" Content="=" Background="#FFE5AC45" Click="KeyEqual_Click"/>
+                <Button x:Name="KeySquare" Grid.Column="0" Grid.Row="2" Content="x2" Visibility="Collapsed" Click="KeySquare_Click"/>
+                <Button x:Name="KeyCube" Grid.Column="1" Grid.Row="2" Content="x3" Visibility="Collapsed" Click="KeyCube_Click"/>
+                <Button x:Name="KeyPowX" Grid.Column="2" Grid.Row="2" Content="Pw" Visibility="Collapsed" Click="KeyPowX_Click"/>
+                <Button x:Name="KeySqrt" Grid.Column="3" Grid.Row="2" Content="srt" Visibility="Collapsed" Click="KeySqrt_Click"/>
+                <Button x:Name="KeyCubrt" Grid.Column="4" Grid.Row="2" Content="crt" Visibility="Collapsed" Click="KeyCubrt_Click"/>
+                <Button x:Name="KeyOneOverX" Grid.Column="0" Grid.Row="1" Content="1/x" Visibility="Collapsed" Click="KeyOneOverX_Click"/>
+                <Button x:Name="KeyFact" Grid.Column="1" Grid.Row="1" Content="!" Visibility="Collapsed" Click="KeyFact_Click"/>
+                <Button x:Name="KeyEquation" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Content="Equation" Visibility="Collapsed"/>
             </Grid>
         </Viewbox>
-
     </DockPanel>
 </Window>

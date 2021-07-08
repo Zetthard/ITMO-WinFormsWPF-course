@@ -81,7 +81,7 @@ namespace WinAsyncMethod
             {
                 MessageBox.Show("При выполнении преобразования типов возникла ошибка");
                 textBox1.Text = textBox2.Text = "";
-                return;
+                return; 
             }
 
             int res = await Sub(a, b);
