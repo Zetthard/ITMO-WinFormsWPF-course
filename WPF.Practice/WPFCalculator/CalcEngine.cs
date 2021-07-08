@@ -248,6 +248,16 @@ namespace WPFCalculator
             return fact;
         }
 
+        internal static double QuadForm(int a, int b, int c, Boolean pos)
+        {
+            double x;
+            if (pos)
+                x = (-b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a);
+            else
+                x = (-Math.Abs(b) - Math.Sqrt(b * b - 4 * a * c)) / (2 * a);
+            return x;
+        }
+
         //
         // Resets the various module-level variables for the next calculation.
         //

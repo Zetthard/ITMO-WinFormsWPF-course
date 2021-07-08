@@ -54,7 +54,7 @@
                 <Button x:Name="KeyOne" Grid.Column="0" Grid.Row="5" Content="1"/>
                 <Button x:Name="KeyTwo" Grid.Column="1" Grid.Row="5" Content="2"/>
                 <Button x:Name="KeyThree" Grid.Column="2" Grid.Row="5" Content="3"/>
-                <Button x:Name="KeyDecimal" Grid.Column="0" Grid.Row="6" Content="‧" VerticalContentAlignment="Center" Click="KeyDecimal_Click"/>
+                <Button x:Name="KeyDecimal" Grid.Column="0" Grid.Row="6" Content="‧" VerticalContentAlignment="Center" Click="KeyDecimal_Click" FontWeight="Bold"/>
                 <Button x:Name="KeyZero" Grid.Column="1" Grid.Row="6" Content="0"/>
                 <Button x:Name="KeySign" Grid.Column="2" Grid.Row="6" Content="±" FontStretch="Condensed" Click="KeySign_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="KeyPercent" Grid.Column="3" Grid.Row="3" Content="%" FontSize="10" Click="KeyPercent_Click"/>
@@ -63,7 +63,7 @@
                 <Button x:Name="KeyDevision" Grid.Column="4" Grid.Row="4" Content="÷" Click="KeyDevision_Click" HorizontalContentAlignment="Center" Padding="1"/>
                 <Button x:Name="KeySubstract" Grid.Column="3" Grid.Row="5" Content="-" Click="KeySubstract_Click" FontWeight="Medium"/>
                 <Button x:Name="KeyAdd" Grid.Column="3" Grid.Row="6" Content="+" Click="KeyAdd_Click"/>
-                <Button x:Name="KeyEqual" Grid.Column="4" Grid.Row="5" Grid.RowSpan="2" Content="=" Background="#FFE5AC45" Click="KeyEqual_Click"/>
+                <Button x:Name="KeyEqual" Grid.Column="4" Grid.Row="5" Grid.RowSpan="2" Content="=" Background="#FFE5AC45" Click="KeyEqual_Click" FontWeight="Medium"/>
                 <Button x:Name="KeySquare" Grid.Column="0" Grid.Row="2" Content="x²" Visibility="Collapsed" Click="KeySquare_Click" FontSize="10"/>
                 <Button x:Name="KeyCube" Grid.Column="1" Grid.Row="2" Content="x³"  Visibility="Collapsed" Click="KeyCube_Click" FontSize="10"/>
                 <Button x:Name="KeyPowX" Grid.Column="2" Grid.Row="2" Content="n" Visibility="Collapsed" Click="KeyPowX_Click" FontStyle="Italic"/>
@@ -71,7 +71,7 @@
                 <Button x:Name="KeyCubrt" Grid.Column="4" Grid.Row="2" Content="∛" Visibility="Collapsed" Click="KeyCubrt_Click"/>
                 <Button x:Name="KeyOneOverX" Grid.Column="0" Grid.Row="1" Content="⅟x" Visibility="Collapsed" Click="KeyOneOverX_Click" FontSize="9"/>
                 <Button x:Name="KeyFact" Grid.Column="1" Grid.Row="1" Content="x!" Visibility="Collapsed" Click="KeyFact_Click" FontStretch="ExtraCondensed" FontSize="10"/>
-                <Button x:Name="KeyEquation" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Content="ax²+bx+c" Visibility="Collapsed" FontSize="8"/>
+                <Button x:Name="KeyEquation" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Content="ax²+bx+c" Visibility="Collapsed" FontSize="8" Click="KeyEquation_Click"/>
             </Grid>
         </Viewbox>
     </DockPanel>
