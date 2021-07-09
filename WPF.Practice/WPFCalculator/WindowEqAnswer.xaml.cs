@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace WPFCalculator
 {
     /// <summary>
-    /// Логика взаимодействия для WindowEqAnswer.xaml
+    /// Окно для альтернативного отображения корней квадратного уравнения.
     /// </summary>
     public partial class WindowEqAnswer : Window
     {

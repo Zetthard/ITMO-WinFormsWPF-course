@@ -34,9 +34,6 @@ namespace WPFCalculator
         private const string nineOut = "9";
         private const string zeroOut = "0";
         private static Mode mode = Mode.standard;
-        public int aCoeff;
-        public int bCoeff;
-        public int cCoeff;
 
         public enum Mode : int
         { standard = 0, scientific = 1 }
@@ -84,13 +81,54 @@ namespace WPFCalculator
             }
         }
 
+        private void myGrid_Click_1(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement feSource = e.Source as FrameworkElement;
+            switch (feSource.Name)
+            {
+                case "KeyOne":
+                    Display.Text = CalcEngine.CalcNumber(oneOut);
+                    break;
+                case "KeyTwo":
+                    Display.Text = CalcEngine.CalcNumber(twoOut);
+                    break;
+                case "KeyThree":
+                    Display.Text = CalcEngine.CalcNumber(threeOut);
+                    break;
+                case "KeyFour":
+                    Display.Text = CalcEngine.CalcNumber(fourOut);
+                    break;
+                case "KeyFive":
+                    Display.Text = CalcEngine.CalcNumber(fiveOut);
+                    break;
+                case "KeySix":
+                    Display.Text = CalcEngine.CalcNumber(sixOut);
+                    break;
+                case "KeySeven":
+                    Display.Text = CalcEngine.CalcNumber(sevenOut);
+                    break;
+                case "KeyEight":
+                    Display.Text = CalcEngine.CalcNumber(eightOut);
+                    break;
+                case "KeyNine":
+                    Display.Text = CalcEngine.CalcNumber(nineOut);
+                    break;
+                case "KeyZero":
+                    Display.Text = CalcEngine.CalcNumber(zeroOut);
+                    break;
+            }
+            e.Handled = true;
+        }
+
+        //
+        //Calc operations
+        //
         private void KeyAdd_Click(object sender, RoutedEventArgs e)
         {
             CalcEngine.CalcOperation(CalcEngine.Operator.eAdd);
             e.Handled = true;
         }
 
-        //Calc operation
         private void KeySubstract_Click(object sender, RoutedEventArgs e)
         {
             CalcEngine.CalcOperation(CalcEngine.Operator.eSubtract);
@@ -139,88 +177,6 @@ namespace WPFCalculator
             e.Handled = true;
         }
 
-        private void MenuExit_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void Display_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            Display.Focus();
-        }
-
-        public static RoutedCommand HelpCmd = new RoutedCommand("About", typeof(MainWindow), coll);
-
-        //private void CommandBinding_Executed_1(object sender, ExecutedRoutedEventArgs e)
-        //{
-        //    MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Warning);
-        //}
-
-        //private void CommandBinding_CanExecute_1(object sender, CanExecuteRoutedEventArgs e)
-        //{
-        //    e.CanExecute = true;
-        //}
-
-        //private void CommandBinding_Executed_2(object sender, ExecutedRoutedEventArgs e)
-        //{
-        //    MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Information);
-        //}
-
-        private void myGrid_Click_1(object sender, RoutedEventArgs e)
-        {
-            FrameworkElement feSource = e.Source as FrameworkElement;
-            switch (feSource.Name)
-            {
-                case "KeyOne":
-                    Display.Text = CalcEngine.CalcNumber(oneOut);
-                    break;
-                case "KeyTwo":
-                    Display.Text = CalcEngine.CalcNumber(twoOut);
-                    break;
-                case "KeyThree":
-                    Display.Text = CalcEngine.CalcNumber(threeOut);
-                    break;
-                case "KeyFour":
-                    Display.Text = CalcEngine.CalcNumber(fourOut);
-                    break;
-                case "KeyFive":
-                    Display.Text = CalcEngine.CalcNumber(fiveOut);
-                    break;
-                case "KeySix":
-                    Display.Text = CalcEngine.CalcNumber(sixOut);
-                    break;
-                case "KeySeven":
-                    Display.Text = CalcEngine.CalcNumber(sevenOut);
-                    break;
-                case "KeyEight":
-                    Display.Text = CalcEngine.CalcNumber(eightOut);
-                    break;
-                case "KeyNine":
-                    Display.Text = CalcEngine.CalcNumber(nineOut);
-                    break;
-                case "KeyZero":
-                    Display.Text = CalcEngine.CalcNumber(zeroOut);
-                    break;
-            }
-            e.Handled = true;
-        }
-
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        //Theme control
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-            REghZyFramework.Themes.ThemesController.SetTheme(REghZyFramework.Themes.ThemesController.ThemeTypes.Dark);
-        }
-
-        private void ListBoxItem_Selected_1(object sender, RoutedEventArgs e)
-        {
-            REghZyFramework.Themes.ThemesController.SetTheme(REghZyFramework.Themes.ThemesController.ThemeTypes.Light);
-        }
-
         private void KeySquare_Click(object sender, RoutedEventArgs e)
         {
             Display.Text = CalcEngine.CalcSquare();
@@ -257,6 +213,42 @@ namespace WPFCalculator
             e.Handled = true;
         }
 
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Display_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Display.Focus();
+        }
+
+        public static RoutedCommand HelpCmd = new RoutedCommand("About", typeof(MainWindow), coll);
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        /*
+        private void CommandBinding_Executed_1(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void CommandBinding_CanExecute_1(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed_2(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Программа вычисления \nпростых арифметических операций", "Калькулятор", MessageBoxButton.OK, MessageBoxImage.Information);
+        }*/
+
+        //
+        // Async factorial computation
+        //
         private async void KeyFact_Click(object sender, RoutedEventArgs e)
         {
             Display.Text = Convert.ToString(await GetFactorial());
@@ -277,6 +269,19 @@ namespace WPFCalculator
             CoefficietsWindow Coeffitients = new CoefficietsWindow();
             Coeffitients.Owner = this;
             Coeffitients.Show();
+        }
+
+        //
+        //Theme control
+        //
+        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            REghZyFramework.Themes.ThemesController.SetTheme(REghZyFramework.Themes.ThemesController.ThemeTypes.Dark);
+        }
+
+        private void ListBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            REghZyFramework.Themes.ThemesController.SetTheme(REghZyFramework.Themes.ThemesController.ThemeTypes.Light);
         }
     }
 }

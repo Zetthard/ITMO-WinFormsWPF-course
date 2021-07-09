@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WPFCalculator
 {
-    /// <summary>
-    /// Логика взаимодействия для CoefficietsWindow.xaml
-    /// </summary>
     public partial class CoefficietsWindow : Window
     {
         public CoefficietsWindow()
@@ -26,7 +23,7 @@ namespace WPFCalculator
 
         private void ButtonOk_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd1 = this.Owner as MainWindow;
+            MainWindow wnd1 = Owner as MainWindow;
             int a = 0;
             int b = 0;
             int c = 0;
@@ -42,10 +39,18 @@ namespace WPFCalculator
             }
             double answer1 = CalcEngine.QuadForm(a, b, c, true);
             double answer2 = CalcEngine.QuadForm(a, b, c, false);
-            WindowEqAnswer wnd2 = new WindowEqAnswer();
-            wnd2.TextBlockRootP.Text = "The positive root is  " + answer1.ToString();
-            wnd2.TextBlockRootN.Text = "The negative root is  " + answer2.ToString();
-            wnd2.Show();
+            wnd1.Display.Text = answer1.ToString("G3") + "  " + answer2.ToString("G3");
+
+            // Альтернативный способ вывода корней уравнения.
+            //WindowEqAnswer wnd2 = new WindowEqAnswer();
+            //wnd2.TextBlockRootP.Text = "The positive root is  " + answer1.ToString("G5");
+            //wnd2.TextBlockRootN.Text = "The negative root is  " + answer2.ToString("G5");
+            //wnd2.Show();
+            Close();
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
             Close();
         }
     }

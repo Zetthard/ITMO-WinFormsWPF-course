@@ -41,50 +41,25 @@ namespace WPFCalculator
         private static bool secondNumberAdded;
         private static bool decimalAdded;
 
-        //
-        // Class Constructor.
-        //
-
         public CalcEngine()
         {
             decimalAdded = false;
             secondNumberAdded = false;
         }
 
-        //
-        // Returns the custom version string to the caller.
-        //
-
         public static string GetVersion()
         {
-            return (versionInfo);
+            return versionInfo;
         }
-        //
-        // Called when the Date key is pressed.
-        //
-
-        public static string GetDate()
-        {
-            DateTime curDate = new DateTime();
-            curDate = DateTime.Now;
-
-            stringAnswer = String.Concat(curDate.ToShortDateString(), " ", curDate.ToLongTimeString());
-
-            return (stringAnswer);
-        }
-
-        //
-        // Called when a number key is pressed on the keypad.
-        //
 
         public static string CalcNumber(string KeyNumber)
         {
             stringAnswer += KeyNumber;
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         //
-        // Called when an operator is selected (+, -, *, /)
+        // Called when an operator is selected (+, -, *, /, pow)
         //
 
         public static void CalcOperation(Operator calcOper)
@@ -98,10 +73,6 @@ namespace WPFCalculator
             }
         }
 
-        //
-        // Called when the +/- key is pressed.
-        //
-
         public static string CalcSign()
         {
             double numHold;
@@ -112,12 +83,8 @@ namespace WPFCalculator
                 stringAnswer = Convert.ToString(numHold * negativeConverter);
             }
 
-            return (stringAnswer);
+            return stringAnswer;
         }
-
-        //
-        // Called when the . key is pressed.
-        //
 
         public static string CalcDecimal()
         {
@@ -131,7 +98,7 @@ namespace WPFCalculator
                 decimalAdded = true;
             }
 
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         //
@@ -183,6 +150,7 @@ namespace WPFCalculator
             {
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(firstNumber / 100);
+                decimalAdded = true;
             }
             return stringAnswer;
         }
@@ -194,7 +162,7 @@ namespace WPFCalculator
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(firstNumber * firstNumber);
             }
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         public static string CalcCube()
@@ -204,7 +172,7 @@ namespace WPFCalculator
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(firstNumber * firstNumber * firstNumber);
             }
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         public static string CalcSqrt()
@@ -214,7 +182,7 @@ namespace WPFCalculator
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(Math.Sqrt(firstNumber));
             }
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         public static string CalcCubert()
@@ -224,7 +192,7 @@ namespace WPFCalculator
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(Math.Pow(firstNumber, (double) 1/3));
             }
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         public static string CalcOneOverX()
@@ -234,7 +202,7 @@ namespace WPFCalculator
                 firstNumber = Convert.ToDouble(stringAnswer);
                 stringAnswer = Convert.ToString(1 / firstNumber);
             }
-            return (stringAnswer);
+            return stringAnswer;
         }
 
         public static int CalcFact()
@@ -248,13 +216,19 @@ namespace WPFCalculator
             return fact;
         }
 
+        //
+        // Quadratic equation algorithm
+        //
+
         internal static double QuadForm(int a, int b, int c, Boolean pos)
         {
             double x;
+            double radicalexp = b * b - 4 * a * c;
+            
             if (pos)
-                x = (-b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a);
+                x = (-b + Math.Sqrt(radicalexp)) / (2 * a);
             else
-                x = (-Math.Abs(b) - Math.Sqrt(b * b - 4 * a * c)) / (2 * a);
+                x = (-Math.Abs(b) - Math.Sqrt(radicalexp)) / (2 * a);
             return x;
         }
 

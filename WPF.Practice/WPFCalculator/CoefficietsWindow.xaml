@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalculator"
         mc:Ignorable="d"
-        Title="CoefficietsWindow" Height="150" Width="320">
+        Title="CoefficietsWindow" Height="150" Width="320" WindowStartupLocation="CenterOwner">
     <Grid>
         <TextBox x:Name="TextBoxA" HorizontalAlignment="Left" Height="28" Margin="47,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44"/>
         <Label Content="a =" HorizontalAlignment="Left" Height="28" Margin="18,29,0,0" VerticalAlignment="Top" Width="24"/>
@@ -13,7 +13,7 @@
         <Label Content="b =" HorizontalAlignment="Left" Height="28" Margin="115,29,0,0" VerticalAlignment="Top" Width="27"/>
         <TextBox x:Name="TextBoxC" HorizontalAlignment="Left" Height="28" Margin="245,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="44"/>
         <Label Content="c =" HorizontalAlignment="Left" Height="28" Margin="214,29,0,0" VerticalAlignment="Top" Width="26"/>
-        <Button x:Name="ButtonCancel" Content="Cancel" HorizontalAlignment="Left" Height="24" Margin="214,79,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+        <Button x:Name="ButtonCancel" Content="Cancel" HorizontalAlignment="Left" Height="24" Margin="214,79,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="ButtonCancel_Click"/>
         <Button x:Name="ButtonOk" Content="Ok" HorizontalAlignment="Left" Height="24" Margin="126,79,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="ButtonOk_Click"/>
 
     </Grid>
